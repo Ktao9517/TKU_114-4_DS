@@ -157,7 +157,7 @@ public class FlexibleCheckoutSystem {
             new ConsoleChannel()
         };
 
-        // 至少測試六種組合
+        
         String[] orderIds = {"ORD-001", "ORD-002", "ORD-003", "ORD-004", "ORD-005", "ORD-006"};
         int[] prices = {1500, 2500, 1800, 3000, 900, 2200};
 

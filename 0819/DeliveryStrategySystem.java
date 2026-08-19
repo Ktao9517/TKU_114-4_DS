@@ -8,7 +8,7 @@ public class DeliveryStrategySystem {
     static class HomeDelivery implements DeliveryMethod {
         @Override
         public int calculateFee(int orderAmount) {
-            if (orderAmount >= 1000) return 0; // 滿千免運
+            if (orderAmount >= 1000) return 0; 
             return 80;
         }
 
@@ -43,7 +43,7 @@ public class DeliveryStrategySystem {
     }
 
     static class OrderService {
-        private DeliveryMethod deliveryMethod; // composition
+        private DeliveryMethod deliveryMethod; 
 
         public OrderService(DeliveryMethod deliveryMethod) {
             this.deliveryMethod = deliveryMethod;

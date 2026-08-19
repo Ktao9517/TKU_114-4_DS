@@ -21,7 +21,7 @@ public class TransportFareSystem {
 
         @Override
         public int calculateFare(int distance) {
-            // 公車：基本 15 元 + 每公里 2 元
+            
             if (distance <= 0) return 15;
             return 15 + distance * 2;
         }
@@ -34,7 +34,7 @@ public class TransportFareSystem {
 
         @Override
         public int calculateFare(int distance) {
-            // 計程車：起程 70 元 + 每公里 5 元
+           
             if (distance <= 0) return 70;
             return 70 + distance * 5;
         }
@@ -54,7 +54,7 @@ public class TransportFareSystem {
 
         for (int i = 0; i < transports.length; i++) {
             Transport t = transports[i];
-            int fare = t.calculateFare(distances[i]); // 多型呼叫
+            int fare = t.calculateFare(distances[i]); 
             System.out.println(t.getRouteName() + " (" + t.getClass().getSimpleName() +
                     ") 距離 " + distances[i] + " km → 票價: " + fare + " 元");
         }

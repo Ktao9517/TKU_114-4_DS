@@ -35,7 +35,7 @@ public class DocumentCapabilityDemo {
 
         BackupDocument doc = new BackupDocument("期末報告.pdf");
 
-        // 同一個物件，用不同 interface reference
+        
         Exportable exporter = doc;
         Compressible compressor = doc;
 
@@ -47,7 +47,7 @@ public class DocumentCapabilityDemo {
         exporter.export("/backup/report.pdf");
         compressor.compress("HIGH");
 
-        // 轉回原型才能呼叫額外方法
+        
         if (exporter instanceof BackupDocument) {
             ((BackupDocument) exporter).showInfo();
         }

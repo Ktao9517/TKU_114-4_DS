@@ -64,12 +64,12 @@ public class DeviceInspectionSystem {
 
         System.out.println("--- 多型執行診斷 ---");
         for (Device d : devices) {
-            d.runDiagnostic(); // polymorphism
+            d.runDiagnostic(); 
         }
 
         System.out.println("\n--- 只對 Printer 執行清潔（pattern matching instanceof）---");
         for (Device d : devices) {
-            if (d instanceof Printer printer) { // pattern matching
+            if (d instanceof Printer printer) { 
                 printer.cleanPrintHead();
             }
         }

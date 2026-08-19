@@ -58,11 +58,11 @@ public class ReportExporterFactory {
             case "json":
                 return new JsonExporter();
             default:
-                return new TextExporter(); // 不支援的 format 回傳 TextExporter
+                return new TextExporter(); 
         }
     }
 
-    // 只依賴 interface，主流程不使用 instanceof 選擇格式
+    
     public static void exportReport(ReportExporter exporter, String title, int[] values) {
         if (exporter == null) {
             System.out.println("Exporter 為 null");
@@ -79,7 +79,7 @@ public class ReportExporterFactory {
         ReportExporter csv = createExporter("csv");
         ReportExporter json = createExporter("json");
         ReportExporter text = createExporter("txt");
-        ReportExporter unknown = createExporter("xml"); // 應回傳 TextExporter
+        ReportExporter unknown = createExporter("xml"); 
 
         exportReport(csv, "Sales Report", data);
         System.out.println();

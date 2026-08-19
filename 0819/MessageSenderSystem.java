@@ -40,7 +40,7 @@ public class MessageSenderSystem {
         }
     }
 
-    // 只依賴 MessageSender interface，新增 sender 不需修改此方法
+    
     public static void notify(MessageSender sender, String receiver, String message) {
         if (sender == null) {
             System.out.println("Sender 為 null，無法通知");
