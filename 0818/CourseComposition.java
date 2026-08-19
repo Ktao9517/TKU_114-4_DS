@@ -26,12 +26,12 @@ public class CourseComposition {
     static class Course {
         private String courseCode;
         private String title;
-        private Instructor instructor; // composition
+        private Instructor instructor; 
 
         public Course(String courseCode, String title, Instructor instructor) {
             this.courseCode = (courseCode == null || courseCode.trim().isEmpty()) ? "Unknown" : courseCode.trim();
             this.title = (title == null || title.trim().isEmpty()) ? "Unknown" : title.trim();
-            this.instructor = instructor; // 可為 null，但建議傳入
+            this.instructor = instructor; 
         }
 
         public String summary() {
@@ -47,7 +47,7 @@ public class CourseComposition {
         Instructor teacherLee = new Instructor("T002", "李老師");
 
         Course javaCourse = new Course("CS101", "Java 程式設計", teacherWang);
-        Course dataStructure = new Course("CS201", "資料結構", teacherWang); // 共用同一位老師
+        Course dataStructure = new Course("CS201", "資料結構", teacherWang); 
         Course database = new Course("CS301", "資料庫系統", teacherLee);
 
         System.out.println(javaCourse.summary());

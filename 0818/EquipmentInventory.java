@@ -35,7 +35,7 @@ public class EquipmentInventory {
         System.out.println("===== 設備庫存物件 =====");
 
         Equipment projector = new Equipment("EQ001", "投影機", 3);
-        Equipment laptop = new Equipment("", "筆記型電腦", -2); // 測試空白 id 與負數
+        Equipment laptop = new Equipment("", "筆記型電腦", -2); 
 
         System.out.println("初始狀態:");
         System.out.println(projector);

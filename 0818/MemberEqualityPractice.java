@@ -40,7 +40,7 @@ public class MemberEqualityPractice {
         System.out.println("===== 會員身分比較 =====");
 
         LibraryMember m1 = new LibraryMember("M1001", "王小明", "wang@example.com");
-        LibraryMember m2 = new LibraryMember("M1001", "王小明", "wang.other@example.com"); // 同 id 不同 email
+        LibraryMember m2 = new LibraryMember("M1001", "王小明", "wang.other@example.com"); 
         LibraryMember m3 = new LibraryMember("M1002", "陳小美", "chen@example.com");
 
         System.out.println("m1: " + m1);

@@ -99,7 +99,7 @@ public class WalletHistoryManager {
             return true;
         }
 
-        /** 轉帳：來源與目標同時留下紀錄。任一失敗則兩邊都不改。 */
+        
         public boolean transferTo(DigitalWallet target, int amount) {
             if (target == null) {
                 System.out.println("目標錢包為 null");
@@ -122,7 +122,7 @@ public class WalletHistoryManager {
                 return false;
             }
 
-            // 兩邊都有空間才真正執行
+            
             this.balance -= amount;
             this.record("TRANSFER_OUT", amount, "轉出至 " + target.walletId);
 
@@ -187,7 +187,7 @@ public class WalletHistoryManager {
         w1.printStatement();
         w2.printStatement();
 
-        // 測試陣列已滿
+        
         System.out.println("\n--- 填滿交易陣列測試 ---");
         DigitalWallet small = new DigitalWallet("W003", "測試", 100, 2);
         small.deposit(50);

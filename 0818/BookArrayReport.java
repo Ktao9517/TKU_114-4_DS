@@ -39,20 +39,20 @@ public class BookArrayReport {
             new Book("B005", "網路概論", 380, 1)
         };
 
-        // 1. 輸出所有書籍
+        
         System.out.println("所有書籍:");
         for (Book b : books) {
             System.out.println(b);
         }
 
-        // 2. 計算庫存總價值
+        
         long totalValue = 0;
         for (Book b : books) {
             totalValue += b.getInventoryValue();
         }
         System.out.println("\n庫存總價值: " + totalValue);
 
-        // 3. 找出價格最高的書
+        
         Book highest = books[0];
         for (int i = 1; i < books.length; i++) {
             if (books[i].getPrice() > highest.getPrice()) {
@@ -61,7 +61,7 @@ public class BookArrayReport {
         }
         System.out.println("價格最高的書: " + highest);
 
-        // 4. 輸出庫存小於或等於 3 的書
+        
         System.out.println("\n庫存 ≤ 3 的書:");
         for (Book b : books) {
             if (b.getStock() <= 3) {

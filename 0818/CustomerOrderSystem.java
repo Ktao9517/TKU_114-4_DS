@@ -41,8 +41,8 @@ public class CustomerOrderSystem {
 
     static class CustomerOrder {
         private String orderId;
-        private Customer customer;          // composition
-        private OrderItem[] items;          // fixed length array
+        private Customer customer;         
+        private OrderItem[] items;          
 
         public CustomerOrder(String orderId, Customer customer, OrderItem[] items) {
             this.orderId = (orderId == null || orderId.trim().isEmpty()) ? "Unknown" : orderId.trim();

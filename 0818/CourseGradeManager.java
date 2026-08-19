@@ -3,10 +3,10 @@ public class CourseGradeManager {
     static class CourseGrade {
         private String studentId;
         private String name;
-        private int daily;      // 平時 0-100
-        private int midterm;    // 期中 0-100
-        private int finalExam;  // 期末 0-100
-        private int attendance; // 出席 0-100（用於計算）
+        private int daily;      
+        private int midterm;    
+        private int finalExam;  
+        private int attendance; 
 
         public CourseGrade(String studentId, String name, int daily, int midterm, int finalExam, int attendance) {
             this.studentId = (studentId == null || studentId.trim().isEmpty()) ? "Unknown" : studentId.trim();
@@ -24,7 +24,7 @@ public class CourseGradeManager {
         }
 
         public double calculateFinalScore() {
-            // 平時 50%、期中 20%、期末 20%、出席 10%
+            
             return daily * 0.5 + midterm * 0.2 + finalExam * 0.2 + attendance * 0.1;
         }
 
@@ -61,14 +61,14 @@ public class CourseGradeManager {
             System.out.println(g);
         }
 
-        // 平均
+        
         double sum = 0;
         for (CourseGrade g : grades) {
             sum += g.calculateFinalScore();
         }
         System.out.println("\n平均總分: " + String.format("%.2f", sum / grades.length));
 
-        // 最高分
+        
         CourseGrade highest = grades[0];
         for (int i = 1; i < grades.length; i++) {
             if (grades[i].calculateFinalScore() > highest.calculateFinalScore()) {
@@ -77,7 +77,7 @@ public class CourseGradeManager {
         }
         System.out.println("最高分: " + highest);
 
-        // 不及格名單
+        
         System.out.println("\n不及格名單:");
         boolean hasFail = false;
         for (CourseGrade g : grades) {

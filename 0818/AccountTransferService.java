@@ -15,7 +15,7 @@ public class AccountTransferService {
         public String getOwner() { return owner; }
         public int getBalance() { return balance; }
 
-        // 僅允許 TransferService 操作
+        
         void deposit(int amount) {
             if (amount > 0) balance += amount;
         }
@@ -34,17 +34,17 @@ public class AccountTransferService {
 
     static class TransferService {
         public boolean transfer(Account source, Account target, int amount) {
-            // 1. null 檢查
+            
             if (source == null || target == null) {
                 System.out.println("來源或目標帳戶為 null，轉帳失敗");
                 return false;
             }
-            // 2. 同一物件檢查
+            
             if (source == target) {
                 System.out.println("來源與目標為同一帳戶，轉帳失敗");
                 return false;
             }
-            // 3. 金額與餘額檢查
+            
             if (amount <= 0) {
                 System.out.println("轉帳金額必須大於 0");
                 return false;
@@ -54,10 +54,10 @@ public class AccountTransferService {
                 return false;
             }
 
-            // 全部驗證通過才執行
+            
             boolean withdrawn = source.withdraw(amount);
             if (!withdrawn) {
-                return false; // 理論上不會到這裡
+                return false; 
             }
             target.deposit(amount);
             System.out.println("轉帳成功: " + amount + " 從 " + source.getAccountId() + " 到 " + target.getAccountId());
