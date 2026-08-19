@@ -22,7 +22,7 @@ public class ProductComparatorPractice {
 
         @Override
         public int compareTo(StoreProduct other) {
-            return this.id.compareTo(other.id); // natural order: id 升冪
+            return this.id.compareTo(other.id); 
         }
 
         @Override
@@ -39,27 +39,27 @@ public class ProductComparatorPractice {
             new StoreProduct("P01", "Keyboard", 890, 12),
             new StoreProduct("P05", "Headset", 1290, 8),
             new StoreProduct("P02", "Mouse", 490, 20),
-            new StoreProduct("P04", "USB", 890, 8),   // 同價 890
-            new StoreProduct("P06", "Webcam", 650, 8)  // 同庫存 8
+            new StoreProduct("P04", "USB", 890, 8),   
+            new StoreProduct("P06", "Webcam", 650, 8)  
         );
 
         System.out.println("原始順序:");
         products.forEach(System.out::println);
 
-        // Natural order (id 升冪)
+        
         List<StoreProduct> byId = new ArrayList<>(products);
         Collections.sort(byId);
         System.out.println("\nNatural order (id 升冪):");
         byId.forEach(System.out::println);
 
-        // Comparator 一：price 升冪，同價依 name
+        
         List<StoreProduct> byPrice = new ArrayList<>(products);
         byPrice.sort(Comparator.comparingInt(StoreProduct::getPrice)
                 .thenComparing(StoreProduct::getName));
         System.out.println("\n依 price 升冪，同價依 name:");
         byPrice.forEach(System.out::println);
 
-        // Comparator 二：stock 降冪，同庫存依 id
+        
         List<StoreProduct> byStock = new ArrayList<>(products);
         byStock.sort(Comparator.comparingInt(StoreProduct::getStock).reversed()
                 .thenComparing(StoreProduct::getId));

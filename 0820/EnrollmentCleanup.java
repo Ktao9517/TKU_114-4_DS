@@ -11,7 +11,7 @@ public class EnrollmentCleanup {
 
         System.out.println("清理前: " + names);
 
-        // 使用 Iterator 移除不合法資料（null、空白）
+        
         Iterator<String> it = names.iterator();
         while (it.hasNext()) {
             String name = it.next();
@@ -22,7 +22,7 @@ public class EnrollmentCleanup {
 
         System.out.println("清理後: " + names);
 
-        // 使用 Set 找出重複姓名
+        
         Set<String> seen = new HashSet<>();
         Set<String> duplicates = new LinkedHashSet<>();
         for (String name : names) {

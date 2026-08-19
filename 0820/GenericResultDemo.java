@@ -48,16 +48,11 @@ public class GenericResultDemo {
         System.out.println(scoreResult);
         System.out.println(failResult);
 
-        // 取出資料不需要 cast
+        
         String name = nameResult.getData();
         Integer score = scoreResult.getData();
         System.out.println("姓名: " + name);
         System.out.println("分數: " + score);
-
-        // 失敗時 data == null
         System.out.println("失敗資料: " + failResult.getData());
-
-        // 編譯期型態安全：以下錯誤程式碼無法編譯
-        // Integer wrong = nameResult.getData();
     }
 }

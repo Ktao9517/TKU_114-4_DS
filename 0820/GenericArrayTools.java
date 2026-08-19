@@ -48,7 +48,7 @@ public class GenericArrayTools {
         System.out.println("\n交換前: " + java.util.Arrays.toString(names));
         swap(names, 0, 2);
         System.out.println("交換後: " + java.util.Arrays.toString(names));
-        swap(names, -1, 0); // 不合法
-        swap(names, 0, 99);  // 不合法
+        swap(names, -1, 0); 
+        swap(names, 0, 99);  
     }
 }

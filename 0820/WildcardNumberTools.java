@@ -58,7 +58,7 @@ public class WildcardNumberTools {
         addRange(objects, 10, 12);
         System.out.println("addRange 10~12: " + objects);
 
-        addRange(numbers, 5, 3); // start > end，不加入
+        addRange(numbers, 5, 3); 
         System.out.println("start > end 後: " + numbers);
     }
 }

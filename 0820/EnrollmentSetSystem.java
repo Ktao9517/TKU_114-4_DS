@@ -42,9 +42,9 @@ public class EnrollmentSetSystem {
         Set<Enrollment> enrollments = new HashSet<>();
 
         Enrollment e1 = new Enrollment("S001", "CS101");
-        Enrollment e2 = new Enrollment("S001", "CS201"); // 同一人不同課程
+        Enrollment e2 = new Enrollment("S001", "CS201"); 
         Enrollment e3 = new Enrollment("S002", "CS101");
-        Enrollment e4 = new Enrollment("S001", "CS101"); // 同一人同一課程（重複）
+        Enrollment e4 = new Enrollment("S001", "CS101"); 
 
         System.out.println("新增 e1 (S001, CS101): " + enrollments.add(e1));
         System.out.println("新增 e2 (S001, CS201): " + enrollments.add(e2));
@@ -53,7 +53,7 @@ public class EnrollmentSetSystem {
 
         System.out.println("\n目前報名: " + enrollments);
 
-        // 以新建立但身分相同的 object 測試
+        
         Enrollment sameAsE1 = new Enrollment("S001", "CS101");
         System.out.println("\ncontains(相同身分新物件): " + enrollments.contains(sameAsE1));
         System.out.println("remove(相同身分新物件): " + enrollments.remove(sameAsE1));
