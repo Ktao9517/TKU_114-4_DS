@@ -62,7 +62,7 @@ public class CounterWaitingQueue {
         counter.serveNext();
         System.out.println("目前等候數: " + counter.waitingCount());
         counter.serveNext();
-        counter.serveNext(); // 空隊列
-        counter.peekNext();  // 空隊列
+        counter.serveNext(); 
+        counter.peekNext();  
     }
 }

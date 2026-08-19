@@ -83,10 +83,10 @@ public class ClinicQueueSystem {
         clinic.callNext();
         clinic.cancel("M003");
         clinic.callNext();
-        clinic.cancel("M999"); // 不存在
+        clinic.cancel("M999"); 
         clinic.callNext();
         clinic.callNext();
-        clinic.callNext(); // 空
+        clinic.callNext(); 
         clinic.printCompleted();
     }
 }

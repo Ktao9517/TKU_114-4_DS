@@ -71,7 +71,7 @@ public class GenericArrayStackDemo {
         stringStack.push("A");
         stringStack.push("B");
         stringStack.push("C");
-        stringStack.push("D"); // 滿
+        stringStack.push("D"); 
         System.out.println("String Stack: " + stringStack + " size=" + stringStack.size());
         System.out.println("peek: " + stringStack.peek());
         System.out.println("pop: " + stringStack.pop());

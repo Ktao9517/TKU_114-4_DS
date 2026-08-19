@@ -88,7 +88,7 @@ public class ServiceCenterWorkflow {
         }
         ServiceTicket ticket = completedStack.pop();
         ticket.setCompleted(false);
-        waiting.offerFirst(ticket); // 放回等待前端
+        waiting.offerFirst(ticket); 
         System.out.println("Undo: " + ticket + " 回到等待前端");
         return ticket;
     }
@@ -111,17 +111,17 @@ public class ServiceCenterWorkflow {
         center.createTicket("T001", "王小明");
         center.createTicket("T002", "陳小美");
         center.createTicket("T003", "林大同");
-        center.createTicket("T001", "重複"); // 重複 id
+        center.createTicket("T001", "重複"); 
 
         center.processNext();
         center.processNext();
         center.cancelWaiting("T003");
-        center.cancelWaiting("T999"); // 不存在
-        center.cancelWaiting("T001"); // 已完成，不可取消
+        center.cancelWaiting("T999"); 
+        center.cancelWaiting("T001"); 
 
         center.undoLastCompletion();
         center.undoLastCompletion();
-        center.undoLastCompletion(); // 空
+        center.undoLastCompletion(); 
 
         center.printSummary();
         System.out.println("find T002: " + center.findById("T002"));

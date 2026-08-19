@@ -145,26 +145,26 @@ public class LinkedTaskListSystem {
         System.out.println("===== 單向鏈結清單 =====");
         TaskLinkedList list = new TaskLinkedList();
 
-        list.printAll(); // 空
+        list.printAll(); 
         list.addLast(new Task("T1", "寫報告"));
         list.addLast(new Task("T2", "開會"));
         list.addFirst(new Task("T0", "緊急"));
-        list.addLast(new Task("T1", "重複測試")); // 重複
+        list.addLast(new Task("T1", "重複測試")); 
         list.printAll();
 
         System.out.println("find T2: " + list.findById("T2"));
         list.insertAfter("T1", new Task("T1.5", "中間任務"));
         list.printAll();
 
-        list.removeById("T0"); // 刪 head
+        list.removeById("T0"); 
         list.printAll();
-        list.removeById("T1.5"); // 刪 middle
+        list.removeById("T1.5"); 
         list.printAll();
-        list.removeById("T2"); // 刪 tail
+        list.removeById("T2"); 
         list.printAll();
-        list.removeById("T999"); // 找不到
+        list.removeById("T999"); 
         list.removeById("T1");
         list.printAll();
-        list.removeById("任何"); // 空 list
+        list.removeById("任何"); 
     }
 }

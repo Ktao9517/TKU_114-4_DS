@@ -7,25 +7,25 @@ public class ListImplementationLab {
     public static void processList(List<Integer> list) {
         System.out.println("初始: " + list);
 
-        // 尾端新增
+        
         list.add(10);
         list.add(20);
         list.add(30);
         System.out.println("尾端新增後: " + list);
 
-        // 指定位置插入
+        
         list.add(1, 15);
         System.out.println("在 index 1 插入 15 後: " + list);
 
-        // 搜尋
+        
         int index = list.indexOf(20);
         System.out.println("搜尋 20 的位置: " + index);
 
-        // 刪除
+        
         list.remove(Integer.valueOf(15));
         System.out.println("刪除 15 後: " + list);
 
-        // 總和
+        
         int sum = 0;
         for (int n : list) {
             sum += n;

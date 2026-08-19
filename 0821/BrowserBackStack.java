@@ -37,8 +37,8 @@ public class BrowserBackStack {
         browser.back();
         browser.visit("https://tech.com");
         browser.back();
-        browser.back(); // 空 stack 測試
-        browser.back(); // 再次空 stack
+        browser.back(); 
+        browser.back(); 
 
         System.out.println("最終目前頁面: " + browser.current());
     }

@@ -75,7 +75,7 @@ public class DeliveryWorkflowSystem {
 
         system.add(new DeliveryTask("D001", "台北市"));
         system.add(new DeliveryTask("D002", "新北市"));
-        system.add(new DeliveryTask("D001", "重複測試")); // 重複
+        system.add(new DeliveryTask("D001", "重複測試")); 
         system.add(new DeliveryTask("D003", "桃園市"));
 
         system.processNext();

@@ -57,7 +57,7 @@ public class DynamicArrayPractice {
             for (int i = index; i < size - 1; i++) {
                 data[i] = data[i + 1];
             }
-            data[--size] = null; // 最後一個無效格設為 null
+            data[--size] = null; 
             return removed;
         }
 
@@ -98,7 +98,7 @@ public class DynamicArrayPractice {
         DynamicArray<String> strArr = new DynamicArray<>();
         strArr.add("A");
         strArr.add("B");
-        strArr.add("C"); // 觸發擴充
+        strArr.add("C"); 
         System.out.println(strArr);
         strArr.add(1, "X");
         System.out.println("插入後: " + strArr);

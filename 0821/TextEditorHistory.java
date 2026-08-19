@@ -8,7 +8,7 @@ public class TextEditorHistory {
 
     public void type(String text) {
         undoStack.push(content);
-        redoStack.clear(); // 新操作清空 redo
+        redoStack.clear(); 
         content = content + text;
         printState("輸入 \"" + text + "\"");
     }
@@ -50,7 +50,7 @@ public class TextEditorHistory {
         editor.type(" Java");
         editor.undo();
         editor.undo();
-        editor.undo(); // 空
+        editor.undo(); 
         editor.redo();
         editor.redo();
     }
